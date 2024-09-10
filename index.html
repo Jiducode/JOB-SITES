@@ -1,50 +1,366 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <title>AI HQ CORP JOB SITES</title>
-</head>
-<body>
-    <!-- Navbar -->
-    <nav class="navbar">
-        <h2 class="navbar-logo"><a href="#">AI HQ CORP</a></h2>
-        <div class="navbar-menu">
-            <a href="#home">Home</a>
-            <a href="#jobs">Jobs</a>
-            <a href="#companies">Companies</a>
-            <a href="#about">About</a>
-            <a href="#page">Page</a>
-            <a href="#signin">Sign in</a>
-        </div>
-        <div class="menu-toggle">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
-    </nav>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AI HQ CORP JOB SITES</title>
+        <link rel="stylesheet" href="style.css">
+        <!-- Font Awesome -->
+        <!--swipper js-->
+        <link rel="stylesheet" href="fontawsome/link.css">
 
-    <!-- Header -->
-    <header>
-        <h1 class="header-title">
-            FIND YOUR <br> <span>PERFECT JOB</span> <br> EASILY
-        </h1>
-    </header>
+    <body>
+        <!-- Navbar -->
+        <nav class="navbar">
+            <h2 class="navbar-logo"><a href="#">AI HQ CORP</a></h2>
+            <div class="navbar-menu">
+                <a href="#home">Home</a>
+                <a href="#jobs">Jobs</a>
+                <a href="#companies">Companies</a>
+                <a href="#about">About</a>
+                <a href="#feedback">Feedback</a>
+                <a href="#signin">Sign In</a>
+            </div>
+            <div class="menu-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
 
-    <!-- Search -->
-    <div class="search-wrapper">
-        <div class="search-box">
-            <div class="search-card">
-                <input class="search-input" type="text" placeholder="Job title or keywords">
-                <button class="search-button">Search</button>
+        <!-- Header -->
+        <header>
+            <h1 class="header-title">
+                FIND YOUR <br> <span>PERFECT JOB</span> <br> EASILY
+            </h1>
+            <!-- Search -->
+            <div class="search-wrapper">
+                <div class="search-box">
+                    <div class="search-card">
+                        <input class="search-input" type="text" placeholder="Job title or keywords" aria-label="Search for jobs">
+                        <button class="search-button">Search</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Filter box -->
+        <div class="filter-dropdown">
+            <select class="filter-select" id="job-level" name="job-level">
+                <option value="">Job Level</option>
+                <option value="entry">Entry</option>
+                <option value="mid-senior">Mid-Senior</option>
+                <option value="director">Director</option>
+            </select>
+            <select class="filter-select" id="job-function" name="job-function">
+                <option value="">Job Function</option>
+                <option value="full-stack-developer">Full Stack Developer</option>
+                <option value="management">Management</option>
+                <option value="data-science">Data Science</option>
+                <option value="svelte-developer">Svelte Developer</option>
+            </select>
+            <select class="filter-select" id="employment" name="employment">
+                <option value="">Employment Type</option>
+                <option value="internship">Internship</option>
+                <option value="part-time">Part Time</option>
+                <option value="full-time">Full Time</option>
+            </select>
+            <select class="filter-select" id="location" name="location">
+                <option value="">Location</option>
+                <option value="remote">Remote</option>
+                <option value="indahag">Indahag</option>
+            </select>
+            <select class="filter-select" id="education" name="education">
+                <option value="">Education</option>
+                <option value="high-school">High School</option>
+                <option value="senior-high-school">Senior High School</option>
+                <option value="bachelors-degree">Bachelor's Degree</option>
+                <option value="masters-degree">Master's Degree</option>
+            </select>
+        </div>
+
+        <!-- Filter Chosen -->
+        <div class="filter-chosen">
+            <div class="chosen-card">
+                Remote <i class="fas fa-times-circle"></i>
+            </div>
+            <div class="chosen-card">
+                Full Time <i class="fas fa-times-circle"></i>
+            </div>
+            <div class="chosen-card">
+                Financial Tech <i class="fas fa-times-circle"></i>
+            </div>
+            <div class="chosen-card">
+                Entry Level <i class="fas fa-times-circle"></i>
             </div>
         </div>
+
+        <!-- Job Listing -->
+        <section class="job-list" id="jobs">
+            <div class="job-card">
+                <div class="job-name">
+                    <img class="job-profile" src="images/software enginner.jpg" alt="AI HQ CORP Software Engineer">
+                    <div class="job-default">
+                        <h4>AI HQ CORP</h4>
+                        <h3>Software Engineer</h3>
+                        <p>Is simply dummy text of the printing and typesetting industry.</p>
+                    </div>
+                </div>
+                <div class="job-label">
+                    <a class="label-a" href="#">HTML</a>
+                    <a class="label-b" href="#">CSS</a>
+                    <a class="label-c" href="#">JavaScript</a>
+                </div>
+                <div class="job-posted">
+                    Posted 2 mins ago
+                </div>
+            </div>
+
+            <div class="job-card">
+                <div class="job-name">
+                    <img class="job-profile" src="images/software enginner.jpg" alt="AI HQ CORP Software Engineer">
+                    <div class="job-default">
+                        <h4>AI HQ CORP</h4>
+                        <h3>Software Engineer</h3>
+                        <p>Is simply dummy text of the printing and typesetting industry.</p>
+                    </div>
+                </div>
+                <div class="job-label">
+                    <a class="label-a" href="#">HTML</a>
+                    <a class="label-b" href="#">CSS</a>
+                    <a class="label-c" href="#">JavaScript</a>
+                </div>
+                <div class="job-posted">
+                    Posted 2 mins ago
+                </div>
+            </div>
+
+            <div class="job-card">
+                <div class="job-name">
+                    <img class="job-profile" src="images/graphic design.jpg" alt="AI HQ CORP Software Engineer">
+                    <div class="job-default">
+                        <h4>AI HQ CORP</h4>
+                        <h3>Software Engineer</h3>
+                        <p>Is simply dummy text of the printing and typesetting industry.</p>
+                    </div>
+                </div>
+                <div class="job-label">
+                    <a class="label-a" href="#">HTML</a>
+                    <a class="label-b" href="#">CSS</a>
+                    <a class="label-c" href="#">JavaScript</a>
+                </div>
+                <div class="job-posted">
+                    Posted 2 mins ago
+                </div>
+            </div>
+            <div class="job-card">
+                <div class="job-name">
+                    <img class="job-profile" src="images/software enginner.jpg" alt="AI HQ CORP Software Engineer">
+                    <div class="job-default">
+                        <h4>AI HQ CORP</h4>
+                        <h3>Software Engineer</h3>
+                        <p>Is simply dummy text of the printing and typesetting industry.</p>
+                    </div>
+                </div>
+                <div class="job-label">
+                    <a class="label-a" href="#">HTML</a>
+                    <a class="label-b" href="#">CSS</a>
+                    <a class="label-c" href="#">JavaScript</a>
+                </div>
+                <div class="job-posted">
+                    Posted 2 mins ago
+                </div>
+            </div>
+            
+
+
+            <!-- Repeat job-card div as needed -->
+
+            <button class="job-more">See More</button>
+        </section>
+
+        <!-- Join Section -->
+        <section>
+            <div class="join">
+                <div class="join-detail">
+                    <h1 class="section-title">
+                        LET'S START YOUR NEW JOB WITH US
+                    </h1>
+                    <p>
+                        Lorem ipsum dolor sit amet. Sed consequatur
+                        amet quo adipisci dolorem est rerum quia aut 
+                        culpa pariatur in eveniet sint et iure illo aut porro 
+                        sint. Non dolore sunt est obcaecati repudiandae qui corrupti sunt et animi aperiam!
+                    </p>
+                </div>
+                <button class="join-button">Join Now</button>
+            </div>
+        </section>
+
+        <!-- Featured Companies -->
+        <section class="featured" id="companies">
+            <h1 class="section-title">Featured</h1>
+            <p>
+                Lorem ipsum dolor sit amet. Sed consequatur
+                amet quo adipisci dolorem est rerum quia aut 
+                culpa pariatur in eveniet sint et iure illo aut porro 
+                sint. Non dolore sunt est obcaecati repudiandae qui corrupti sunt et animi aperiam!
+            </p>
+            <div class="featured-wrapper">
+                <div class="featured-card">
+                    <img class="featured-image" src="images/google.jpg" alt="Ebay">
+                    <p>Google</p>
+                    <button class="featured-button">View 2 jobs</button>
+                </div>
+            
+                <div class="featured-card">
+                    <img class="featured-image" src="images/facebook.jpeg" alt="Ebay">
+                    <p>Facebook</p>
+                    <button class="featured-button">View 2 jobs</button>
+                </div>
+                <div class="featured-card">
+                    <img class="featured-image" src="images/youtube.jpg" alt="Ebay">
+                    <p>Youtube</p>
+                    <button class="featured-button">View 2 jobs</button>
+                </div>
+                <div class="featured-card">
+                    <img class="featured-image" src="images/tiktkok.jpg" alt="Ebay">
+                    <p>Tiktok</p>
+                    <button class="featured-button">View 2 jobs</button>
+                </div>
+                <div class="featured-card">
+                    <img class="featured-image" src="images/LinkedIn_icon_circle.jpg" alt="Ebay">
+                    <p>LinkedIn</p>
+                    <button class="featured-button">View 2 jobs</button>
+                </div>
+
+                <div class="featured-card">
+                    <img class="featured-image" src="images/LinkedIn_icon_circle.jpg" alt="Ebay">
+                    <p>LinkedIn</p>
+                    <button class="featured-button">View 2 jobs</button>
+                </div>
+                <div class="featured-card">
+                    <img class="featured-image" src="images/LinkedIn_icon_circle.jpg" alt="Ebay">
+                    <p>LinkedIn</p>
+                    <button class="featured-button">View 2 jobs</button>
+                </div>
+                <div class="featured-card">
+                    <img class="featured-image" src="images/LinkedIn_icon_circle.jpg" alt="Ebay">
+                    <p>LinkedIn</p>
+                    <button class="featured-button">View 2 jobs</button>
+                </div>
+                <div class="featured-card">
+                    <img class="featured-image" src="images/LinkedIn_icon_circle.jpg" alt="Ebay">
+                    <p>LinkedIn</p>
+                    <button class="featured-button">View 2 jobs</button>
+                </div>
+                <div class="featured-card">
+                    <img class="featured-image" src="images/LinkedIn_icon_circle.jpg" alt="Ebay">
+                    <p>LinkedIn</p>
+                    <button class="featured-button">View 2 jobs</button>
+                </div>
+                <div class="featured-card">
+                    <img class="featured-image" src="images/LinkedIn_icon_circle.jpg" alt="Ebay">
+                    <p>LinkedIn</p>
+                    <button class="featured-button">View 2 jobs</button>
+                </div>
+                <div class="featured-card">
+                    <img class="featured-image" src="images/LinkedIn_icon_circle.jpg" alt="Ebay">
+                    <p>LinkedIn</p>
+                    <button class="featured-button">View 2 jobs</button>
+                </div>
+            </div>
+        </section>
+            
+     <!-- Feedbacks -->
+  <!-- Feedbacks -->
+<!-- Feedbacks Section -->
+<section class="feedback" id="feedback">
+    <h1 class="section-title">Feedbacks</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <!-- Feedback 1 -->
+            <div class="swiper-slide">
+                <div class="feedback-box">
+                    <i class="fas fa-quote-left"></i>
+                    <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit</h3>
+                    <div class="feedback-image">
+                        <img src="images/google.jpg" alt="Jireh Magallanes">
+                        <p>Jireh Magallanes</p>
+                        <span>Fullstack Developer</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Feedback 2 -->
+            <div class="swiper-slide">
+                <div class="feedback-box">
+                    <i class="fas fa-quote-left"></i>
+                    <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit</h3>
+                    <div class="feedback-image">
+                        <img src="images/google.jpg" alt="Jerome Porcado">
+                        <p>Jerome Porcado</p>
+                        <span>Fullstack Developer</span>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="feedback-box">
+                    <i class="fas fa-quote-left"></i>
+                    <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit</h3>
+                    <div class="feedback-image">
+                        <img src="images/google.jpg" alt="Jerome Porcado">
+                        <p>Jerome Porcado</p>
+                        <span>Fullstack Developer</span>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+               
+                <div class="feedback-box">
+                    <i class="fas fa-quote-left"></i>
+                    <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit</h3>
+                    <div class="feedback-image">
+                        <img src="images/google.jpg" alt="Jerome Porcado">
+                        <p>Jerome Porcado</p>
+                        <span>Fullstack Developer</span>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="feedback-box">
+                    <i class="fas fa-quote-left"></i>
+                    <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum nesciunt dolore voluptatem vel qui non 
+                        eveniet cupiditate animi ipsum reiciendis! Esse modi dolore laborum, quis libero dolores suscipit excepturi deserunt.</h3>
+                    <div class="feedback-image">
+                        <img src="images/google.jpg" alt="Jerome Porcado">
+                        <p>Jerome Porcado</p>
+                        <span>Fullstack Developer</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+         <br> 
+          <br>
+        <!-- Pagination (optional) -->
+        <div class="swiper-pagination"></div>
     </div>
-</body>
-</html>
+</section>
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs"></script>
+<script src="app.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs"></script>
+<script src="app.js"></script>
+
+
+    </body>
+    </html>
