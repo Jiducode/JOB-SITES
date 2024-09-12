@@ -5,6 +5,7 @@
             --greyColor: #f6f8fa;
             --labelColor: #64b1f5;
             --yellowColor: #ffd723;
+            --redColor: #ff2323;
         }
 
         * {
@@ -115,7 +116,7 @@
         }
 
         .header-title span {
-            color: var(--primaryColor);
+            color: var(--yellowColor);
         }
 
         .search-wrapper {
@@ -157,8 +158,10 @@
             border: none;
             color: var(--whiteColor);
             cursor: pointer;
+            font-size: 18px;
+            font-weight: bold; 
         }
-
+        
         .filter-dropdown {
             width: 60%;
             margin: 3rem auto; 
@@ -210,122 +213,142 @@
             margin-left: 0.5rem; 
         }
 
-    j .job-list {
-        margin: 5%;
-        padding: 1rem;
-        background-color: var(--greyColor);
-        align-items: center;
-    }
-    .job-card {
-        display: flex;
-        justify-content: space-between; /* Ensure space between job name and job label */
-        padding: 1rem;
-        margin: 1rem;
-        min-height: 100px;
-        align-items: center;
-        background-color: var(--whiteColor);
-        box-shadow: rgba(0,0,0,0.16) 0px 1px 4px;
-        cursor: pointer;
-    }
-    .job-card:hover {
-        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-    }
+          /*---Job list ---*/
+.job-list {
+    margin: 2%;
+    padding: 2rem;
+    background-color: var(--whiteColor);
+    align-items: center;
+    text-align: center; /* Center the text within the section */
+}
 
-    .job-name {
-        display: flex;
-        align-items: center; /* Align items vertically in job-name */
-    }
+.section-description {
+    text-align: center; /* Center the text within the paragraph */
+    margin: 0 auto; /* Center the paragraph itself if needed */
+    max-width: 800px; /* Optional: Set a max-width for better readability */
+}
 
-    .job-profile {
-        width: 60px;
-        height: 60px;
-        margin: 0.5rem;
-    }
+.job-card {
+    display: flex;
+    justify-content: space-between; 
+    padding: 1rem;
+    margin: 2rem;
+    min-height: 100px;
+    align-items: center;
+    background-color: var(--whiteColor);
+    box-shadow: rgba(0,0,0,0.16) 0px 1px 4px;
+    cursor: pointer;
+}
 
-    section#jobs {
-        padding: 0 22.5rem;
-    }
-    
-    .job-detail  {
-        padding: 0 10px;
-    }
-    .job-detail > h4 {
-        color: var(--primaryColor);
-        font-size: 0.9rem;
-    }
+.job-card:hover {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
 
-    .job-detail > p {
-        display: -webkit-box;
-        overflow: hidden;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 2;
-    }
+.job-name {
+    display: flex;
+    align-items: center; /* Align items vertically in job-name */
+}
 
-    .job-label {
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .job-label > a {
-        padding: 0.3rem 0.6rem;
-        color: var(--whiteColor);
-        text-decoration: none;
-        border-radius: 20px;
-        font-size: 0.8rem;
-        display: inline-block; 
-        text-align: center; 
-    }
+.job-profile {
+    width: 60px;
+    height: 60px;
+    margin: 0.5rem;
+}
 
-        .label-a {
-            background-color: var(--yellowColor);
-        }
-        
-        .label-b {
-            background-color: var(--primaryColor);
-        }
-        
-        .label-c {
-            background-color: var(--blackColor);
-        }
+section#jobs {
+    padding: 0 22.5rem;
+}
 
-        .job-posted {
-            font-size: 0.8rem;
-        }
+.job-default {
+    flex: 1; /* Allow job-default to take available space */
+    padding: 0 1rem; /* Add some padding around the text */
+    text-align: left; /* Align text to the left */
+}
 
-        .job-more {
-            display: block;
-            padding: 0.3rem 2rem;
-            margin: 20px auto;
-            width: 250px;
-            background-color: transparent;
-            color: var(--primaryColor);
-            border: 1px solid var(--primaryColor);
-            border-radius: 20px;
-            cursor: pointer;
+.job-default h4,
+.job-default h3 {
+    margin: 0;
+}
 
-        }
+.job-default h4 {
+    margin-bottom: 0.5rem; /* Space below the h4 */
+}
 
-        .job-more:hover {
-            background-color: var(--primaryColor);
-            color: var(--whiteColor);
+.job-default h3 {
+    margin: 0.5rem 0; /* Space above and below the h3 */
+}
 
-        }
+.job-default p {
+    margin-top: 0.5rem; /* Space above the paragraph */
+    margin-bottom: 0; /* No space below the paragraph */
+}
 
-        .job-default {
-            flex: 1; /* Allow job-default to take available space */
-            padding: 0 1rem; /* Add some padding around the text */
-            text-align: left; /* Align text to the left */
-        }
-        .job-default h4,
-        .job-default h3,
-        .job-default p {
-            margin: 0; 
-        }
+.job-label {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem; /* Space between the labels */
+    margin-top: 1rem; /* Space above the labels */
+}
+
+.job-label > a {
+    padding: 0.3rem 0.6rem;
+    color: var(--whiteColor);
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    display: inline-block; 
+    text-align: center; 
+}
+
+.label-a {
+    background-color: var(--yellowColor);
+}
+
+.label-b {
+    background-color: var(--primaryColor);
+}
+
+.label-c {
+    background-color: var(--blackColor);
+}
+
+.job-posted {
+    font-size: 0.8rem;
+    color: var(--blackColor); 
+    margin-top: 1rem; 
+}
+
+
+.job-more {
+    display: block;
+    padding: 0.3rem 2rem;
+    margin: 20px auto;
+    width: 250px;
+    background-color: transparent;
+    color: var(--primaryColor);
+    border: 1px solid var(--primaryColor);
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.job-more:hover {
+    background-color: var(--primaryColor);
+    color: var(--whiteColor);
+}
+.job-experience {
+    font-size: 0.8rem;
+    color: var(--blackColor); /* Adjust color as needed */
+    margin-top: 1rem; /* Space above the experience label */
+}
+
+
+        /*---join label ----*/
 
         .join {
-            position: relative; /* Add this line */
+            position: relative;
             width: 100%;
             height: 350px;
-            background-image: url("images/join\ now.jpg");
+            background-image: url("images/join\ us.jpg");
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
@@ -335,8 +358,12 @@
             justify-content: space-between;
             padding: 1rem 3rem;
             align-items: center;
+            image-rendering: auto; /* Ensure proper image rendering */
+            image-rendering: crisp-edges; /* To prevent blurriness on upscaled images */
+            image-rendering: high-quality; /* Use the best rendering mode available */
         }
         
+        /* Transparent overlay on top of the background image */
         .join::before {
             content: "";
             position: absolute;
@@ -344,22 +371,22 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(180deg, rgba(0,85,177,0.6) 0%, rgba(0,122,255,0.5) 100%),
-                        linear-gradient(180deg, rgba(0,122,255,0.65) 0%, transparent 100%);
-            z-index: 1;
+            background: linear-gradient(180deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%);
+            z-index: 1; 
         }
         
-        .join-detail{ 
+        .join-detail { 
             min-width: 280px;
             width: 50%;
-            z-index: 2;
-            margin-bottom: 1rem; 
+            z-index: 2; /* Ensure the text is above the overlay */
+            margin-bottom: 1rem;
         }
-        .job-detail > h1 {
+        
+        .join-detail h1 {
             font-size: 36px;
-            letter-spacing: 2;
+            letter-spacing: 2px; /* Adjusted letter-spacing */
         }
-
+        
         .join-button {
             width: 200px;
             padding: 1rem;
@@ -367,9 +394,24 @@
             color: var(--blackColor);
             background-color: var(--yellowColor);
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-            z-index: 2;
+            z-index: 2; /* Ensure the button is above the overlay */
             cursor: pointer;
+            transition: all 0.3s ease; /* Smooth transition */
         }
+        
+        .join-button:hover {
+            background-color: var(--blackColor);
+            color: var(--yellowColor); /* Change text color */
+            transform: scale(1.05); /* Slightly increase size */
+            box-shadow: rgba(0, 0, 0, 0.45) 0px 8px 20px; 
+        }
+        .join-detail p {
+            text-align: justify;
+            /* Optional: Add some margin or padding to improve readability */
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        
 
         .featured  {
             width: 100%;
@@ -397,11 +439,11 @@
         }
         
         .section-title {
+            text-align: center; /* Center align the text */
             margin-bottom: 0.5rem;
-            letter-spacing:  1.5;
-            font-size:  36px;
+            letter-spacing: 1.5px; /* Added px unit for clarity */
+            font-size: 30px;
         }
-
         
         .featured-wrapper {
             display: grid;
@@ -412,11 +454,6 @@
             align-items: center;
 
             }
-        .section-title {
-            margin-bottom: 0.5rem;
-            letter-spacing: 1.5;
-            font-size: 36px;
-        }
         
         .featured-button {
             border: 1px solid var(--primaryColor);
@@ -434,102 +471,108 @@
         }
 
         
-    /*---- Feedback Styles (Boxed Feedback with Image, Name, and Role) ----*/
-    .feedback {
-        width: 100%;
-        text-align: center;
-        padding: 3rem 1rem;
-        background-color: var(--primaryColor);
-        color: var(--whiteColor);
-    }
-
-    .feedback .swiper {
-        width: 80%;
-        margin: 1rem auto;
-    }
-
-    /* Feedback box for each card */
-    .feedback-box {
-        background-color: var(--whiteColor);
-        padding: 1.5rem;
-        border-radius: 10px;
-        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-        color: var(--blackColor);
-        width: 100%;
-        max-width: 400px; /* Max width for large screens */
-        margin: 0 auto; /* Center the box */
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between; /* Allow the card to grow based on content */
-    }
-
-    /* Content container to ensure flexible height */
-    .feedback-content {
-        flex: 1; /* Allow content to grow */
-    }
-
-    /* Image section */
-    .feedback-image {
-        margin-top: 1rem;
-        padding: 1rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .feedback-image img {
-        width: 60px;  /* Adjusted image width */
-        height: 60px; /* Adjusted image height */
-        border-radius: 50%;
-        object-fit: cover;
-        margin-bottom: 0.5rem;
-    }
-
-    .feedback-image p {
-        font-size: 1rem;
-        font-weight: bold;
-        margin-bottom: 0.25rem;
-        color: var(--primaryColor);
-    }
-
-    .feedback-image span {
-        font-size: 0.9rem;
-        color: var(--blackColor);
-    }
-
-    /* Swiper slide styles */
-    .swiper-slide {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 15px;
-        color: var(--whiteColor);
-    }
-
-    .swiper-slide i {
-        font-size: 30px;
-        color: var(--yellowColor);
-        margin-bottom: 1rem;
-    }
-
-    .swiper-slide h3 {
-        font-family: "Noto Serif", serif;
-        font-size: 1rem;
-        color: var(--blackColor);
-        margin: 0.5rem 0;
-        text-align: center;
-    }
-
-
-    /* Adjust for flexible text inside h3 */
-    .feedback-box h3 {
-        font-family: "Noto Serif", serif;
-        font-size: 1rem;
-        color: var(--blackColor);
-        margin: 0.5rem 0;
-        flex: 1; /* Allow the text area to grow and shrink */
-        overflow: hidden; /* Prevent overflow */
-    }
+        .feedback {
+            width: 100%;
+            text-align: center;
+            padding: 3rem 1rem;
+            background-color: var(--blackColor);
+            color: var(--whiteColor);
+            background-image: url("images/feedback.jpg");
+            background-size: cover; /* Ensure the background image covers the section */
+            background-position: center; /* Center the background image */
+            background-blend-mode: overlay; /* Blend the background image with the background color */
+            opacity: 0.8; /* Adjust opacity to make the image blend with the background color */
+        }
+        
+        .feedback .swiper {
+            width: 80%;
+            margin: 1rem auto;
+        }
+        
+        /* Feedback box for each card */
+        .feedback-box {
+            background-color: var(--whiteColor);
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+            color: var(--blackColor);
+            width: 100%;
+            max-width: 400px; /* Max width for large screens */
+            margin: 0 auto; /* Center the box */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Allow the card to grow based on content */
+        }
+        
+        /* Content container to ensure flexible height */
+        .feedback-content {
+            flex: 1; /* Allow content to grow */
+        }
+        
+        /* Image section */
+        .feedback-image {
+            margin-top: 1rem;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        /* Adjust the image size and fit */
+        .feedback-image img {
+            width: 80px;  /* Increased image width */
+            height: 80px; /* Increased image height */
+            border-radius: 50%;
+            object-fit: cover; /* Ensure the image covers the container */
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Additional styling for text */
+        .feedback-image p {
+            font-size: 1rem;
+            font-weight: bold;
+            margin-bottom: 0.25rem;
+            color: var(--primaryColor);
+        }
+        
+        .feedback-image span {
+            font-size: 0.9rem;
+            color: var(--blackColor);
+        }
+        
+        /* Swiper slide styles */
+        .swiper-slide {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 15px;
+            color: var(--whiteColor);
+        }
+        
+        .swiper-slide i {
+            font-size: 30px;
+            color: var(--yellowColor);
+            margin-bottom: 1rem;
+        }
+        
+        .swiper-slide h3 {
+            font-family: "Noto Serif", serif;
+            font-size: 1rem;
+            color: var(--blackColor);
+            margin: 0.5rem 0;
+            text-align: center;
+        }
+        
+        /* Adjust for flexible text inside h3 */
+        .feedback-box h3 {
+            font-family: "Noto Serif", serif;
+            font-size: 1rem;
+            color: var(--blackColor);
+            margin: 0.5rem 0;
+            flex: 1; /* Allow the text area to grow and shrink */
+            overflow: hidden; /* Prevent overflow */
+        }
+        
     .blog {
         width: 100%;
         height: auto;
@@ -560,8 +603,8 @@
             padding: 20px;
         }
         .blog-detail span {
-            color: var(--yellowColor);
-            font-size: 0.7rem;
+            color:var(--redColor);
+            font-size: 1rem;
         }
     .blog-detail h4 {
         padding: 10px 0;
@@ -583,7 +626,7 @@
             flex-wrap: wrap;
             justify-content: space-between;
             align-items: flex-start;
-            background-color: var(--primaryColor);
+            background-color: var(--blackColor);
             color: var(--whiteColor);
             padding: 3rem;
             }
@@ -667,4 +710,16 @@
             
         }
     }
-        
+    
+    .copyright {
+        width: 100%;
+        color: var(--blackColor); /* Text color */
+        text-align: center; /* Center-align the text */
+        padding: 0.9rem; /* Padding around the text */
+        font-size: 0.9rem; /* Font size */
+        background-color: transparent; /* Transparent background */
+        font-weight: bold; /* Make the text bold */
+        position: relative; /* Allows positioning relative to the parent container */
+    }
+    
+    
