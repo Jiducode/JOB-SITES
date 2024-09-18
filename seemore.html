@@ -1,32 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI HQ CORP JOB SITES</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="seemore.css">
     <!-- Font Awesome -->
-    <!--swipper js-->
     <link rel="stylesheet" href="fontawsome/link.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
- </head>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+       
+    </style>
+</head>
 
 <body>
     <!-- Navbar -->
     <nav class="navbar">
         <h2 class="navbar-logo">
             <img src="images/AI HQ CORP.jpg" alt="AI HQ CORP Logo" class="logo-image">
-            <a href="#">AI HQ CORP</a>
+            <a href="index.html" onclick="window.location.href='index.html'; return false;">AI HQ CORP</a>
         </h2>
         <div class="navbar-menu">
-            <a href="#home">Home</a>
-            <a href="#jobs">Jobs</a>
-            <a href="#companies">Companies</a>
+            <!-- <a href="#home">Home</a> -->
+            <a href="index.html" onclick="window.location.href='index.html'; return false;">Home</a>
+            <!-- <a href="#companies">Companies</a>
             <a href="#feedback">Feedback</a>
             <a href="#blogs">Blogs</a>
             <a href="#about">About</a>
-            <a href="#signin">Sign In</a>
+            <a href="#signin">Sign In</a> -->
         </div>
         <div class="menu-toggle">
             <span class="bar"></span>
@@ -37,13 +41,10 @@
         </div>
     </nav>
     
-
     <!-- Header -->
     <header>
-        
         <h1 class="header-title" id="home">
-            
-            FIND YOUR <br> <span>PERFECT JOB</span> <br> EASILY
+            FIND YOUR <br> <span>PERFECT JOB</span> <br>
         </h1>
         <!-- Search -->
         <div class="search-wrapper">
@@ -55,3 +56,349 @@
             </div>
         </div>
     </header>
+
+    <!-- Filter box -->
+    <div class="filter-dropdown">
+        <select class="filter-select" id="job-level" name="job-level">
+            <option value="">Job Level</option>
+            <option value="entry">Entry</option>
+            <option value="mid-senior">Mid-Senior</option>
+            <option value="director">Director</option>
+        </select>
+        <select class="filter-select" id="job-function" name="job-function">
+            <option value="">Job Function</option>
+            <option value="full-stack-developer">Full Stack Developer</option>
+            <option value="management">Management</option>
+            <option value="data-science">Data Science</option>
+            <option value="svelte-developer">Svelte Developer</option>
+        </select>
+        <select class="filter-select" id="employment" name="employment">
+            <option value="">Employment Type</option>
+            <option value="internship">Internship</option>
+            <option value="part-time">Part Time</option>
+            <option value="full-time">Full Time</option>
+        </select>
+        <select class="filter-select" id="location" name="location">
+            <option value="">Location</option>
+            <option value="remote">Remote</option>
+            <option value="indahag">Indahag</option>
+        </select>
+        <select class="filter-select" id="education" name="education">
+            <option value="">Education</option>
+            <option value="high-school">High School</option>
+            <option value="senior-high-school">Senior High School</option>
+            <option value="bachelors-degree">Bachelor's Degree</option>
+            <option value="masters-degree">Master's Degree</option>
+        </select>
+    </div>
+
+    <!-- Filter Chosen -->
+    <div class="filter-chosen">
+        <div class="chosen-card">
+            Remote <i class="fas fa-times-circle"></i>
+        </div>
+        <div class="chosen-card">
+            Full Time <i class="fas fa-times-circle"></i>
+        </div>
+        <div class="chosen-card">
+            Financial Tech <i class="fas fa-times-circle"></i>
+        </div>
+        <div class="chosen-card">
+            Entry Level <i class="fas fa-times-circle"></i>
+        </div>
+    </div>
+
+    <!-- Job Listing -->
+    <section class="job-list" id="jobs">
+        <h1 class="section-title">AVAILABLE JOB HIRING</h1>
+        <p class="section-description">Explore a range of exciting job opportunities available now. 
+            Find the perfect role to advance your career and join a dynamic team!</p>
+
+        <!-- Job Cards (Repeated for Pagination) -->
+        <!-- Job Card 1 -->
+        <div class="job-card">
+            <div class="job-name">
+                <img class="job-profile" src="images/software enginner.jpg" alt="AI HQ CORP Software Engineer">
+                <div class="job-default">
+                    <h4>AI HQ CORP</h4>
+                    <h3>Software Engineer</h3>
+                    <p>Join our cutting-edge team to design and build scalable applications in a collaborative and innovative environment.</p>
+                </div>
+            </div>
+            <div class="job-label">
+                <a class="label-a" href="#">HTML</a>
+                <a class="label-b" href="#">CSS</a>
+                <a class="label-c" href="#">JavaScript</a>
+            </div>
+            <div class="job-experience">
+                <p>Atleast 3 Years Experience</p>
+            </div>
+            <div class="job-posted">
+                Posted 2 mins ago
+            </div>
+        </div>
+
+        <!-- Job Card 2 -->
+        <div class="job-card">
+            <div class="job-name">
+                <img class="job-profile" src="images/Dat science logo.png" alt="Tech Innovators Data Scientist">
+                <div class="job-default">
+                    <h4>AI HQ CORP</h4>
+                    <h3>Data Scientist</h3>
+                    <p>Help us turn big data into actionable insights by applying machine learning models and advanced analytics.</p>
+                </div>
+            </div>
+            <div class="job-label">
+                <a class="label-a" href="#">Python</a>
+                <a class="label-b" href="#">SQL</a>
+                <a class="label-c" href="#">TensorFlow</a>
+            </div>
+            <div class="job-experience">
+                <p>Atleast 3 Years Experience</p>
+            </div>
+            <div class="job-posted">
+                Posted 10 mins ago
+            </div>
+        </div>
+
+        <!-- Job Card 3 -->
+        <div class="job-card">
+            <div class="job-name">
+                <img class="job-profile" src="images/graphic design.jpg" alt="Design Studio Graphic Designer">
+                <div class="job-default">
+                    <h4>AI HQ CORP</h4>
+                    <h3>Graphic Designer</h3>
+                    <p>Creativity meets strategy! Use your design skills to create visual assets for a wide range of projects in digital and print media.</p>
+                </div>
+            </div>
+            <div class="job-label">
+                <a class="label-a" href="#">Photoshop</a>
+                <a class="label-b" href="#">Illustrator</a>
+                <a class="label-c" href="#">Figma</a>
+            </div>
+            <div class="job-experience">
+                <p>Atleast 3 Years Experience</p>
+            </div>
+            <div class="job-posted">
+                Posted 5 mins ago
+            </div>
+        </div>
+
+        <!-- Job Card 4 (New Role Added) -->
+        <div class="job-card">
+            <div class="job-name">
+                <img class="job-profile" src="images/project manger.jpg" alt="Innovate Corp Project Manager">
+                <div class="job-default">
+                    <h4>AI HQ CORP</h4>
+                    <h3>Project Manager</h3>
+                    <p>Lead project teams, coordinate resources, and ensure timely delivery of projects. Your leadership skills will drive project success.</p>
+                </div>
+            </div>
+            <div class="job-label">
+                <a class="label-a" href="#">Project Management</a>
+                <a class="label-b" href="#">Agile</a>
+                <a class="label-c" href="#">Scrum</a>
+            </div>
+            <div class="job-experience">
+                <p>Atleast 3 Years Experience</p>
+            </div>
+            <div class="job-posted">
+                Posted 15 mins ago
+            </div>
+        </div>  
+
+        <div class="job-card">
+            <div class="job-name">
+                <img class="job-profile" src="images/software enginner.jpg" alt="AI HQ CORP Software Engineer">
+                <div class="job-default">
+                    <h4>AI HQ CORP</h4>
+                    <h3>Software Engineer</h3>
+                    <p>Join our cutting-edge team to design and build scalable applications in a collaborative and innovative environment.</p>
+                </div>
+            </div>
+            <div class="job-label">
+                <a class="label-a" href="#">HTML</a>
+                <a class="label-b" href="#">CSS</a>
+                <a class="label-c" href="#">JavaScript</a>
+            </div>
+            <div class="job-experience">
+                <p>Atleast 3 Years Experience</p>
+            </div>
+            <div class="job-posted">
+                Posted 2 mins ago
+            </div>
+        </div>
+
+        <!-- Job Card 2 -->
+        <div class="job-card">
+            <div class="job-name">
+                <img class="job-profile" src="images/Dat science logo.png" alt="Tech Innovators Data Scientist">
+                <div class="job-default">
+                    <h4>AI HQ CORP</h4>
+                    <h3>Data Scientist</h3>
+                    <p>Help us turn big data into actionable insights by applying machine learning models and advanced analytics.</p>
+                </div>
+            </div>
+            <div class="job-label">
+                <a class="label-a" href="#">Python</a>
+                <a class="label-b" href="#">SQL</a>
+                <a class="label-c" href="#">TensorFlow</a>
+            </div>
+            <div class="job-experience">
+                <p>Atleast 3 Years Experience</p>
+            </div>
+            <div class="job-posted">
+                Posted 10 mins ago
+            </div>
+        </div>
+
+        <!-- Job Card 3 -->
+        <div class="job-card">
+            <div class="job-name">
+                <img class="job-profile" src="images/graphic design.jpg" alt="Design Studio Graphic Designer">
+                <div class="job-default">
+                    <h4>AI HQ CORP</h4>
+                    <h3>Graphic Designer</h3>
+                    <p>Creativity meets strategy! Use your design skills to create visual assets for a wide range of projects in digital and print media.</p>
+                </div>
+            </div>
+            <div class="job-label">
+                <a class="label-a" href="#">Photoshop</a>
+                <a class="label-b" href="#">Illustrator</a>
+                <a class="label-c" href="#">Figma</a>
+            </div>
+            <div class="job-experience">
+                <p>Atleast 3 Years Experience</p>
+            </div>
+            <div class="job-posted">
+                Posted 5 mins ago
+            </div>
+        </div>
+
+        <!-- Job Card 4 (New Role Added) -->
+        <div class="job-card">
+            <div class="job-name">
+                <img class="job-profile" src="images/project manger.jpg" alt="Innovate Corp Project Manager">
+                <div class="job-default">
+                    <h4>AI HQ CORP</h4>
+                    <h3>Project Manager</h3>
+                    <p>Lead project teams, coordinate resources, and ensure timely delivery of projects. Your leadership skills will drive project success.</p>
+                </div>
+            </div>
+            <div class="job-label">
+                <a class="label-a" href="#">Project Management</a>
+                <a class="label-b" href="#">Agile</a>
+                <a class="label-c" href="#">Scrum</a>
+            </div>
+            <div class="job-experience">
+                <p>Atleast 3 Years Experience</p>
+            </div>
+            <div class="job-posted">
+                Posted 15 mins ago
+            </div>
+        </div>
+
+        <div class="job-card">
+            <div class="job-name">
+                <img class="job-profile" src="images/software enginner.jpg" alt="AI HQ CORP Software Engineer">
+                <div class="job-default">
+                    <h4>AI HQ CORP</h4>
+                    <h3>Software Engineer</h3>
+                    <p>Join our cutting-edge team to design and build scalable applications in a collaborative and innovative environment.</p>
+                </div>
+            </div>
+            <div class="job-label">
+                <a class="label-a" href="#">HTML</a>
+                <a class="label-b" href="#">CSS</a>
+                <a class="label-c" href="#">JavaScript</a>
+            </div>
+            <div class="job-experience">
+                <p>Atleast 3 Years Experience</p>
+            </div>
+            <div class="job-posted">
+                Posted 2 mins ago
+            </div>
+        </div>
+
+        <!-- Job Card 2 -->
+        <div class="job-card">
+            <div class="job-name">
+                <img class="job-profile" src="images/Dat science logo.png" alt="Tech Innovators Data Scientist">
+                <div class="job-default">
+                    <h4>AI HQ CORP</h4>
+                    <h3>Data Scientist</h3>
+                    <p>Help us turn big data into actionable insights by applying machine learning models and advanced analytics.</p>
+                </div>
+            </div>
+            <div class="job-label">
+                <a class="label-a" href="#">Python</a>
+                <a class="label-b" href="#">SQL</a>
+                <a class="label-c" href="#">TensorFlow</a>
+            </div>
+            <div class="job-experience">
+                <p>Atleast 3 Years Experience</p>
+            </div>
+            <div class="job-posted">
+                Posted 10 mins ago
+            </div>
+        </div>
+
+        <!-- Job Card 3 -->
+        <div class="job-card">
+            <div class="job-name">
+                <img class="job-profile" src="images/graphic design.jpg" alt="Design Studio Graphic Designer">
+                <div class="job-default">
+                    <h4>AI HQ CORP</h4>
+                    <h3>Graphic Designer</h3>
+                    <p>Creativity meets strategy! Use your design skills to create visual assets for a wide range of projects in digital and print media.</p>
+                </div>
+            </div>
+            <div class="job-label">
+                <a class="label-a" href="#">Photoshop</a>
+                <a class="label-b" href="#">Illustrator</a>
+                <a class="label-c" href="#">Figma</a>
+            </div>
+            <div class="job-experience">
+                <p> Atleast 3 Years Experience</p>
+            </div>
+            <div class="job-posted">
+                Posted 5 mins ago
+            </div>
+        </div>
+
+        <!-- Job Card 4 (New Role Added) -->
+        <div class="job-card">
+            <div class="job-name">
+                <img class="job-profile" src="images/project manger.jpg" alt="Innovate Corp Project Manager">
+                <div class="job-default">
+                    <h4>AI HQ CORP</h4>
+                    <h3>Project Manager</h3>
+                    <p>Lead project teams, coordinate resources, and ensure timely delivery of projects. Your leadership skills will drive project success.</p>
+                </div>
+            </div>
+            <div class="job-label">
+                <a class="label-a" href="#">Project Management</a>
+                <a class="label-b" href="#">Agile</a>
+                <a class="label-c" href="#">Scrum</a>
+            </div>
+            <div class="job-experience">
+                <p>Atleast 3 Years Experience</p>
+            </div>
+            <div class="job-posted">
+                Posted 15 mins ago
+            </div>
+        </div>
+
+        
+
+        <!-- Pagination Controls -->
+        <div class="pagination">
+            <button class="page-btn" id="prevBtn">Previous</button>
+            <span id="pageNumbers"></span>
+            <button class="page-btn" id="nextBtn">Next</button>
+        </div>
+    </section>
+    <script src  ="seemore.js" ></script>
+  
+</body>
+</html>
